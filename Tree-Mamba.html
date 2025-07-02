@@ -74,10 +74,11 @@
           <div class="column has-text-centered">
 
             <!-- 论文标题 -->
-            <h1 class="title is-1 publication-title">Tree-Mamba: A Tree-Aware Mamba for Underwater Monocular Depth Estimation</h1>
+            <h1 class="title is-1 publication-title">Tree-Mamba: A Tree-Aware Mamba for Underwater Monocular Depth
+              Estimation</h1>
 
             <!-- 期刊名 -->
-            <h2 class="title is-3">XXXX 2025</h2>
+            <!-- <h2 class="title is-3">XXXX 2025</h2> -->
 
             <!-- 作者信息 -->
             <div class="is-size-5 publication-authors">
@@ -97,13 +98,17 @@
 
               <span class="author-block">Yanchen Guo<sup>4</sup>,</span>
 
-
               <span class="author-block">
-                <a href="https://www.cityu.edu.hk/stfprofile/cssamk.htm" target="_blank">Sam Kwong</a><sup>5</sup>,
+                <a href="https://ieeexplore.ieee.org/author/37089821496" target="_blank">Hongliang
+                  Zhang</a><sup>5</sup>,
               </span>
 
               <span class="author-block">
-                <a href="https://li-chongyi.github.io/" target="_blank">Chongyi Li</a><sup>6,*</sup>
+                <a href="https://www.cityu.edu.hk/stfprofile/cssamk.htm" target="_blank">Sam Kwong</a><sup>6</sup>,
+              </span>
+
+              <span class="author-block">
+                <a href="https://li-chongyi.github.io/" target="_blank">Chongyi Li</a><sup>7,*</sup>
               </span>
 
             </div>
@@ -114,8 +119,9 @@
               <span class="author-block"><sup>2</sup>Wenzhou Medical University,&nbsp;&nbsp;</span><br>
               <span class="author-block"><sup>3</sup>Tsinghua University,&nbsp;&nbsp;</span>
               <span class="author-block"><sup>4</sup>Laoshan Laboratory,&nbsp;&nbsp;</span>
-              <span class="author-block"><sup>5</sup>City University of Hong Kong,&nbsp;&nbsp;</span><br>
-              <span class="author-block"><sup>6</sup>Nankai University&nbsp;&nbsp;</span>
+              <span class="author-block"><sup>5</sup>Deepinfar Ocean Technology Inc.,&nbsp;&nbsp;</span><br>
+              <span class="author-block"><sup>6</sup>City University of Hong Kong,&nbsp;&nbsp;</span>
+              <span class="author-block"><sup>7</sup>Nankai University&nbsp;&nbsp;</span>
             </div>
 
             <!-- 贡献说明 -->
@@ -222,8 +228,10 @@
 
             <p>
               Underwater Monocular Depth Estimation (UMDE) is a critical task that aims to estimate high-precision depth
-              maps from underwater degraded images caused by light absorption and scattering effects in marine environments.
-              Recently prevailing Mamba-based methods have achieved the promising performance across various vision tasks, 
+              maps from underwater degraded images caused by light absorption and scattering effects in marine
+              environments.
+              Recently prevailing Mamba-based methods have achieved the promising performance across various vision
+              tasks,
               however, these approaches
               perform poorly in the UMDE task since their inflexible state scanning strategies fail in modeling
               structural features of
@@ -766,39 +774,40 @@
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
-          <div class="twoitem">
+        <div class="twoitem">
 
-            <div class="video twentytwenty-after" style="clip: rect(0px, 436.4px, 242.464px, 218.2px);">
-              <video muted="" autoplay="autoplay" loop="loop" width="100%">
-                <source src="Videos\Blue.mp4" type="video/mp4">
-              </video>
-            </div>
-
-            <div class="video twentytwenty-after" style="clip: rect(0px, 436.4px, 242.464px, 218.2px);">
-              <video muted="" autoplay="autoplay" loop="loop" width="100%">
-                <source src="Videos\Non_Light.mp4" type="video/mp4">
-              </video>
-            </div>
-
-            <div class="video twentytwenty-after" style="clip: rect(0px, 436.4px, 242.464px, 218.2px);">
-              <video muted="" autoplay="autoplay" loop="loop" width="100%">
-                <source src="Videos\Green.mp4" type="video/mp4">
-              </video>
-            </div>
-
-            <div class="video twentytwenty-after" style="clip: rect(0px, 436.4px, 242.464px, 218.2px);">
-              <video muted="" autoplay="autoplay" loop="loop" width="100%">
-                <source src="Videos\Turbid.mp4" type="video/mp4">
-              </video>
-            </div>
-
-            <p>
-              Underwater videos predicted by our Tree-Mamba method. 
-              The left half shows raw underwater videos, while the right half displays predicted depth results. 
-              The predicted depth results exhibit noticeable consistency across frames, which highlights the scalability of our Tree-Mamba.
-            </p>
+          <div class="video twentytwenty-after" style="clip: rect(0px, 436.4px, 242.464px, 218.2px);">
+            <video muted="" autoplay="autoplay" loop="loop" width="100%">
+              <source src="Videos\Blue.mp4" type="video/mp4">
+            </video>
           </div>
-  
+
+          <div class="video twentytwenty-after" style="clip: rect(0px, 436.4px, 242.464px, 218.2px);">
+            <video muted="" autoplay="autoplay" loop="loop" width="100%">
+              <source src="Videos\Non_Light.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="video twentytwenty-after" style="clip: rect(0px, 436.4px, 242.464px, 218.2px);">
+            <video muted="" autoplay="autoplay" loop="loop" width="100%">
+              <source src="Videos\Green.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="video twentytwenty-after" style="clip: rect(0px, 436.4px, 242.464px, 218.2px);">
+            <video muted="" autoplay="autoplay" loop="loop" width="100%">
+              <source src="Videos\Turbid.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <p>
+            Underwater videos predicted by our Tree-Mamba method.
+            The left half shows raw underwater videos, while the right half displays predicted depth results.
+            The predicted depth results exhibit noticeable consistency across frames, which highlights the scalability
+            of our Tree-Mamba.
+          </p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -857,15 +866,20 @@
 
             <p>
               The schematic diagram of constructing our UDBE dataset.
-              Dataset A contains all underwater images from the existing seven UMDE datasets (Sea-Thru, NYU-U, SQUID, FLSea, Atlantis,
-              SUIM-SDA, and USOD10K), while Dataset B stores all pseudo-labeled depth maps for each underwater image from Dataset A.
-              Dataset C is a subset randomly selected from Dataset B, while Dataset D is its subjectively labeled counterpart. The
+              Dataset A contains all underwater images from the existing seven UMDE datasets (Sea-Thru, NYU-U, SQUID,
+              FLSea, Atlantis,
+              SUIM-SDA, and USOD10K), while Dataset B stores all pseudo-labeled depth maps for each underwater image
+              from Dataset A.
+              Dataset C is a subset randomly selected from Dataset B, while Dataset D is its subjectively labeled
+              counterpart. The
               generation and selection of high-quality depth maps includes four main steps:
-              Step 1: six state-of-the-art MDE methods (AdaBins, DPT, Marigold, Depth Anything V1, Depth Anything V2, and Lotus Depth)
+              Step 1: six state-of-the-art MDE methods (AdaBins, DPT, Marigold, Depth Anything V1, Depth Anything V2,
+              and Lotus Depth)
               are used to generate pseudo-labeled depth maps from Dataset A.
               Step 2: the depth maps are subjectively evaluated from Dataset B.
               Step 3: the LAR-IQA model is fine-tuned with Dataset D.
-              Step 4: the fine-tuned LAR-IQA model is employed to automatically select the best depth maps from Dataset B.
+              Step 4: the fine-tuned LAR-IQA model is employed to automatically select the best depth maps from Dataset
+              B.
             </p>
 
 
@@ -873,14 +887,15 @@
               Comparison with Other Datasets
             </h3>
 
-            <img id="comparison" width="100%" src="images\Dataset\Qual UDEB_All.jpg" alt="Comparison with other methods" />
+            <img id="comparison" width="100%" src="images\Dataset\Qual UDEB_All.jpg"
+              alt="Comparison with other methods" />
 
 
             <p>
-              Visual results using our proposed UDEB dataset versus other datasets. 
-              ST, NY, SQ, FL, AT, SU, US, and <span style="color: red;">UD</span> denote the model trained on 
+              Visual results using our proposed UDEB dataset versus other datasets.
+              ST, NY, SQ, FL, AT, SU, US, and <span style="color: red;">UD</span> denote the model trained on
               Sea-Thru, NYU-U, SQUID, FLSea, Atlantis, SUIM-SDA, USOD10K, and our UDEB, respectively.
-              The depth results of UW-GAN, UDepth, UW-Depth, 
+              The depth results of UW-GAN, UDepth, UW-Depth,
               and Tree-Mamba are significantly improved by training on our UDEB dataset,
               meanwhile, our Tree-Mamba method yields better depth results than other competitors.
             </p>
@@ -907,13 +922,13 @@
               src="images\Method\Framework.jpg" alt="DepthFM training scheme" />
 
             <p>
-              The overview of our proposed Tree-Mamba architecture. 
-              An underwater image first passes the CNN-based encoder to produce multi-scale feature maps. 
+              The overview of our proposed Tree-Mamba architecture.
+              An underwater image first passes the CNN-based encoder to produce multi-scale feature maps.
               Then, these feature maps are fed into Conv 3&times;3 layers for reducing feature channel.
-              Next, Mamba fusion layers are used to refine these feature maps, 
-              where the proposed tree-aware scanning strategy 
-              adaptively constructs minimum spanning tree with spatial topology structure 
-              from input feature maps and propagates multi-scale structure features by tree state propagation. 
+              Next, Mamba fusion layers are used to refine these feature maps,
+              where the proposed tree-aware scanning strategy
+              adaptively constructs minimum spanning tree with spatial topology structure
+              from input feature maps and propagates multi-scale structure features by tree state propagation.
               The depth map is finally produced through the prediction head.
             </p>
 
