@@ -96,18 +96,18 @@
                 <a href="https://zhenqifu.github.io/index.html" target="_blank">Zhenqi Fu</a><sup>3</sup>,
               </span>
 
-              <span class="author-block">Yanchen Guo<sup>4</sup>,</span>
+              <!-- <span class="author-block">Yanchen Guo<sup>4</sup>,</span> -->
 
               <span class="author-block">
-                <a href="https://ieeexplore.ieee.org/author/37089821496" target="_blank">Hongliang Zhang</a><sup>5</sup>,
+                <a href="https://ieeexplore.ieee.org/author/37089821496" target="_blank">Hongliang Zhang</a><sup>4</sup>,
               </span>
 
               <span class="author-block">
-                <a href="https://www.cityu.edu.hk/stfprofile/cssamk.htm" target="_blank">Sam Kwong</a><sup>6</sup>,
+                <a href="https://www.cityu.edu.hk/stfprofile/cssamk.htm" target="_blank">Sam Kwong</a><sup>5</sup>,
               </span>
 
               <span class="author-block">
-                <a href="https://li-chongyi.github.io/" target="_blank">Chongyi Li</a><sup>7,*</sup>
+                <a href="https://li-chongyi.github.io/" target="_blank">Chongyi Li</a><sup>6,*</sup>
               </span>
 
             </div>
@@ -117,10 +117,10 @@
               <span class="author-block"><sup>1</sup>University of Science and Technology Beijing,&nbsp;&nbsp;</span>
               <span class="author-block"><sup>2</sup>Wenzhou Medical University,&nbsp;&nbsp;</span><br>
               <span class="author-block"><sup>3</sup>Tsinghua University,&nbsp;&nbsp;</span>
-              <span class="author-block"><sup>4</sup>Laoshan Laboratory,&nbsp;&nbsp;</span>
-              <span class="author-block"><sup>5</sup>Deepinfar Ocean Technology Inc.,&nbsp;&nbsp;</span><br>
-              <span class="author-block"><sup>6</sup>City University of Hong Kong,&nbsp;&nbsp;</span>
-              <span class="author-block"><sup>7</sup>Nankai University&nbsp;&nbsp;</span>
+              <!-- <span class="author-block"><sup>4</sup>Laoshan Laboratory,&nbsp;&nbsp;</span> -->
+              <span class="author-block"><sup>4</sup>Deepinfar Ocean Technology Inc.,&nbsp;&nbsp;</span><br>
+              <span class="author-block"><sup>5</sup>City University of Hong Kong,&nbsp;&nbsp;</span>
+              <span class="author-block"><sup>6</sup>Nankai University&nbsp;&nbsp;</span>
             </div>
 
             <!-- 贡献说明 -->
@@ -246,8 +246,8 @@
               aggregated
               through bottom-up and top-down traversals, enabling to achieve stronger capabilities of multi-scale
               feature
-              representation. Moreover, we construct an Underwater Depth Estimation Benchmark (UDEB), including 38,162
-              underwater
+              representation. Moreover, we construct an underwater depth estimation benchmark (called BlueDepth), 
+              including 38,162 underwater
               image pairs with reliable depth labels, as a baseline for training existing deep learning-based UMDE
               methods to learn
               accurate object-depth relationships. Extensive experiments demonstrate the superiority of the proposed
@@ -855,7 +855,7 @@
       <!-- Method. -->
       <div class="columns is-centered has-text-centered">
         <div class="column">
-          <h2 class="title is-3">Underwater Depth Estimation Benchmark (UDEB)</h2>
+          <h2 class="title is-3">Underwater Depth Estimation Benchmark (BlueDepth)</h2>
           <div class="content has-text-justified" style="width: 1300px;">
 
 
@@ -864,21 +864,18 @@
               src="images\Dataset\Flowchart of URDB.jpg" alt="DepthFM training scheme" />
 
             <p>
-              The schematic diagram of constructing our UDBE dataset.
-              Dataset A contains all underwater images from the existing seven UMDE datasets (Sea-Thru, NYU-U, SQUID,
-              FLSea, Atlantis,
-              SUIM-SDA, and USOD10K), while Dataset B stores all pseudo-labeled depth maps for each underwater image
-              from Dataset A.
-              Dataset C is a subset randomly selected from Dataset B, while Dataset D is its subjectively labeled
-              counterpart. The
-              generation and selection of high-quality depth maps includes four main steps:
-              Step 1: six state-of-the-art MDE methods (AdaBins, DPT, Marigold, Depth Anything V1, Depth Anything V2,
-              and Lotus Depth)
-              are used to generate pseudo-labeled depth maps from Dataset A.
-              Step 2: the depth maps are subjectively evaluated from Dataset B.
-              Step 3: the LAR-IQA model is fine-tuned with Dataset D.
-              Step 4: the fine-tuned LAR-IQA model is employed to automatically select the best depth maps from Dataset
-              B.
+              The schematic diagram of constructing our BlueDepth dataset.
+              Dataset <span style="color: red;">A</span> contains all underwater images from the existing seven UMDE datasets (Sea-Thru, NYU-U, SQUID,
+              FLSea, Atlantis, SUIM-SDA, and USOD10K), 
+              while Dataset <span style="color: red;">B</span> stores all pseudo-labeled depth maps for each underwater image from Dataset <span style="color: red;">A</span>.
+              Dataset <span style="color: red;">C</span> is a subset randomly selected from Dataset <span style="color: red;">B</span>, 
+              while Dataset <span style="color: red;">D</span> is its subjectively labeled counterpart. 
+              The generation and selection of high-quality depth maps includes four main steps:
+              Step 1: six state-of-the-art MDE methods (AdaBins, DPT, Marigold, Depth Anything V1, Depth Anything V2, and Lotus Depth)
+              are used to generate pseudo-labeled depth maps from Dataset <span style="color: red;">A</span>.
+              Step 2: the depth maps are subjectively evaluated from Dataset <span style="color: red;">B</span>.
+              Step 3: the LAR-IQA model is fine-tuned with Dataset <span style="color: red;">D</span>.
+              Step 4: the fine-tuned LAR-IQA model is employed to automatically select the best depth maps from Dataset <span style="color: red;">B</span>.
             </p>
 
 
@@ -886,16 +883,16 @@
               Comparison with Other Datasets
             </h3>
 
-            <img id="comparison" width="100%" src="images\Dataset\Qual UDEB_All.jpg"
+            <img id="comparison" width="100%" src="images\Dataset\Qual UDEB_All.png"
               alt="Comparison with other methods" />
 
 
             <p>
-              Visual results using our proposed UDEB dataset versus other datasets.
-              ST, NY, SQ, FL, AT, SU, US, and <span style="color: red;">UD</span> denote the model trained on
-              Sea-Thru, NYU-U, SQUID, FLSea, Atlantis, SUIM-SDA, USOD10K, and our UDEB, respectively.
+              Visual results using our proposed BlueDepth dataset versus other datasets.
+              ST, NY, SQ, FL, AT, SU, US, and <span style="color: red;">BD</span> denote the model trained on
+              Sea-Thru, NYU-U, SQUID, FLSea, Atlantis, SUIM-SDA, USOD10K, and our BlueDepth, respectively.
               The depth results of UW-GAN, UDepth, UW-Depth,
-              and Tree-Mamba are significantly improved by training on our UDEB dataset,
+              and Tree-Mamba are significantly improved by training on our BlueDepth dataset,
               meanwhile, our Tree-Mamba method yields better depth results than other competitors.
             </p>
 
