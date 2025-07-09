@@ -99,7 +99,8 @@
               <!-- <span class="author-block">Yanchen Guo<sup>4</sup>,</span> -->
 
               <span class="author-block">
-                <a href="https://ieeexplore.ieee.org/author/37089821496" target="_blank">Hongliang Zhang</a><sup>4</sup>,
+                <a href="https://ieeexplore.ieee.org/author/37089821496" target="_blank">Hongliang
+                  Zhang</a><sup>4</sup>,
               </span>
 
               <span class="author-block">
@@ -144,7 +145,18 @@
                   </span>
                   <span>Paper</span>
                 </a>
-              </span> -->
+                </span> -->
+
+                <!-- Supplementary Material. -->
+                <span class="link-block">
+                  <a href="./Documents/Tree-Mamba (Supplementary Material).pdf" target="_blank"
+                    rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf" style="color: orangered"></i>
+                    </span>
+                    <span>Supplementary Material</span>
+                  </a>
+                </span>
 
                 <!-- Code Link. -->
                 <span class="link-block">
@@ -157,16 +169,27 @@
                   </a>
                 </span>
 
+                <!-- Dataset. -->
+                <span class="link-block">
+                  <a href="https://drive.google.com/drive/folders/1WXsIrubdkS7xShKJigcar7CnJeJVsfqp?usp=sharing"
+                    target="_blank" rel="noopener noreferrer" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="images/google_drive.svg">
+                    </span>
+                    <span>&nbsp;Dataset</span>
+                  </a>
+                </span>
+
                 <!-- Colab Link. -->
                 <!-- <span class="link-block">
-                <a href="https://colab.research.google.com/drive/xxx-u?usp=sharing" target="_blank" rel="noopener noreferrer"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <img src="images/colab.svg">
-                  </span>
-                  <span>&nbsp;Google Colab</span>
-                </a>
-              </span> -->
+                  <a href="https://colab.research.google.com/drive/xxx-u?usp=sharing" target="_blank" rel="noopener noreferrer"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="images/colab.svg">
+                    </span>
+                    <span>&nbsp;Google Colab</span>
+                  </a>
+                </span> -->
 
                 <!-- Hugging Face. -->
                 <!-- <span class="link-block">
@@ -246,7 +269,7 @@
               aggregated
               through bottom-up and top-down traversals, enabling to achieve stronger capabilities of multi-scale
               feature
-              representation. Moreover, we construct an underwater depth estimation benchmark (called BlueDepth), 
+              representation. Moreover, we construct an underwater depth estimation benchmark (called BlueDepth),
               including 38,162 underwater
               image pairs with reliable depth labels, as a baseline for training existing deep learning-based UMDE
               methods to learn
@@ -865,17 +888,22 @@
 
             <p>
               The schematic diagram of constructing our BlueDepth dataset.
-              Dataset <span style="color: red;">A</span> contains all underwater images from the existing seven UMDE datasets (Sea-Thru, NYU-U, SQUID,
-              FLSea, Atlantis, SUIM-SDA, and USOD10K), 
-              while Dataset <span style="color: red;">B</span> stores all pseudo-labeled depth maps for each underwater image from Dataset <span style="color: red;">A</span>.
-              Dataset <span style="color: red;">C</span> is a subset randomly selected from Dataset <span style="color: red;">B</span>, 
-              while Dataset <span style="color: red;">D</span> is its subjectively labeled counterpart. 
+              Dataset <span style="color: red;">A</span> contains all underwater images from the existing seven UMDE
+              datasets (Sea-Thru, NYU-U, SQUID,
+              FLSea, Atlantis, SUIM-SDA, and USOD10K),
+              while Dataset <span style="color: red;">B</span> stores all pseudo-labeled depth maps for each underwater
+              image from Dataset <span style="color: red;">A</span>.
+              Dataset <span style="color: red;">C</span> is a subset randomly selected from Dataset <span
+                style="color: red;">B</span>,
+              while Dataset <span style="color: red;">D</span> is its subjectively labeled counterpart.
               The generation and selection of high-quality depth maps includes four main steps:
-              Step 1: six state-of-the-art MDE methods (AdaBins, DPT, Marigold, Depth Anything V1, Depth Anything V2, and Lotus Depth)
+              Step 1: six state-of-the-art MDE methods (AdaBins, DPT, Marigold, Depth Anything V1, Depth Anything V2,
+              and Lotus Depth)
               are used to generate pseudo-labeled depth maps from Dataset <span style="color: red;">A</span>.
               Step 2: the depth maps are subjectively evaluated from Dataset <span style="color: red;">B</span>.
               Step 3: the LAR-IQA model is fine-tuned with Dataset <span style="color: red;">D</span>.
-              Step 4: the fine-tuned LAR-IQA model is employed to automatically select the best depth maps from Dataset <span style="color: red;">B</span>.
+              Step 4: the fine-tuned LAR-IQA model is employed to automatically select the best depth maps from Dataset
+              <span style="color: red;">B</span>.
             </p>
 
 
