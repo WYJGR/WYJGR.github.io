@@ -143,7 +143,7 @@
                   <span class="icon">
                       <i class="fas fa-file-pdf" style="color: orangered"></i>
                   </span>
-                  <span>Paper</span>
+                  <span style="font-size: larger;">Paper</span>
                 </a>
                 </span> -->
 
@@ -154,7 +154,7 @@
                     <span class="icon">
                       <i class="fas fa-file-pdf" style="color: orangered"></i>
                     </span>
-                    <span>Supplementary Material</span>
+                    <span style="font-size: larger;">Supplementary Material</span>
                   </a>
                 </span>
 
@@ -165,7 +165,7 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span style="font-size: larger;">Code</span>
                   </a>
                 </span>
 
@@ -176,7 +176,7 @@
                     <span class="icon">
                       <img src="images/google_drive.svg">
                     </span>
-                    <span>&nbsp;Dataset</span>
+                    <span style="font-size: larger;">&nbsp;Dataset</span>
                   </a>
                 </span>
 
@@ -187,7 +187,7 @@
                     <span class="icon">
                       <img src="images/colab.svg">
                     </span>
-                    <span>&nbsp;Google Colab</span>
+                    <span  style="font-size: larger;">&nbsp;Google Colab</span>
                   </a>
                 </span> -->
 
@@ -198,7 +198,7 @@
                   <span class="icon">
                       &#129303;
                   </span>
-                  <span>Hugging Face Space</span>
+                  <span  style="font-size: larger;">Hugging Face Space</span>
                 </a>
               </span> -->
 
@@ -273,7 +273,6 @@
 
           </div>
 
-          <h2 class="title is-3">Gallery (Underwater General Images)</h2>
 
         </div>
       </div>
@@ -283,6 +282,13 @@
 
 
   <!-- Gallery General -->
+  <section class="hero is-light is-small">
+    <h2 class="title is-3 gallery-title">🔥 Visual Results 🔥</h2>
+  </section>
+
+
+
+  <h2 class="title is-3 gallery-title">Underwater General Images</h2>
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
@@ -635,9 +641,8 @@
   </section>
 
 
-
   <!-- Gallery Panoramic -->
-  <h2 class="title is-3 gallery-title">Gallery (Underwater Panoramic Images)</h2>
+  <h2 class="title is-3 gallery-title">Underwater Panoramic Images</h2>
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
@@ -784,7 +789,7 @@
   </section>
 
   <!-- Gallery Panoramic -->
-  <h2 class="title is-3 gallery-title">Gallery (Underwater Videos)</h2>
+  <h2 class="title is-3 gallery-title">Underwater Videos</h2>
   <section class="hero is-light is-small">
     <div class="hero-body">
       <div class="container">
@@ -862,50 +867,24 @@
     });
   </script>
 
+  <h2 class="title is-3 gallery-title">🔥 BlueDepth 🔥</h2>
 
 
   <!-- 数据集部分 -->
-  <section class="section">
+  <section class="section hero is-light is-small">
     <div class="container is-max-desktop">
       <!-- Method. -->
       <div class="columns is-centered has-text-centered">
         <div class="column">
-          <h2 class="title is-3">Underwater Depth Estimation Benchmark (BlueDepth)</h2>
+          <!-- <h2 class="title is-3">BlueDepth</h2> -->
           <div class="content has-text-justified" style="width: 1300px;">
-
-
-            <!-- # Center the image -->
-            <img id="method_train" style="margin-left: auto; margin-right: auto; display: block;"
-              src="images\Dataset\Flowchart of URDB.jpg" alt="DepthFM training scheme" />
-
-            <p>
-              The schematic diagram of constructing our BlueDepth dataset.
-              Dataset <span style="color: red;">A</span> contains all underwater images from the existing seven UMDE
-              datasets (Sea-Thru, NYU-U, SQUID, FLSea, Atlantis, SUIM-SDA, and USOD10K),
-              while Dataset <span style="color: red;">B</span> 
-              stores all pseudo-labeled depth maps for each underwater
-              image from Dataset <span style="color: red;">A</span>.
-              Dataset <span style="color: red;">C</span> is a subset randomly selected 
-              from Dataset <span style="color: red;">B</span>,
-              while Dataset <span style="color: red;">D</span> is its subjectively labeled counterpart.
-              The generation and selection of high-quality depth maps includes four main steps.
-              <em>Step 1</em> : Six state-of-the-art MDE methods 
-              (AdaBins, DPT, Marigold, Depth Anything V1, Depth Anything V2, and Lotus Depth)
-              are used to generate pseudo-labeled depth maps from Dataset <span style="color: red;">A</span>.
-              <em>Step 2</em> : The depth maps are subjectively evaluated from Dataset <span style="color: red;">C</span>.
-              <em>Step 3</em> : The LAR-IQA model is fine-tuned with Dataset <span style="color: red;">D</span>.
-              <em>Step 4</em> : The fine-tuned LAR-IQA model is employed to automatically 
-              select the best depth maps from Dataset <span style="color: red;">B</span>.
-            </p>
 
 
             <h3 class="title has-text-centered">
               Comparison with Other Datasets
             </h3>
 
-            <img id="comparison" width="100%" src="images\Dataset\Qual UDEB_All.png"
-              alt="Comparison with other methods" />
-
+            <img id="comparison" width="100%" src="images\Dataset\Qual UDEB_All.png" alt="Comparison with other methods" />
 
             <p>
               Visual results using our proposed BlueDepth dataset versus other datasets.
@@ -924,45 +903,64 @@
 
 
 
+
+  <h2 class="title is-3 gallery-title">🔥 Method 🔥</h2>
+
   <!-- 方法部分 -->
-  <section class="section">
+  <section class="section hero is-light is-small">
     <div class="container is-max-desktop">
       <!-- Method. -->
       <div class="columns is-centered has-text-centered">
         <div class="column">
-          <h2 class="title is-3">Tree-aware Mamba (Tree-Mamba)</h2>
+          
           <div class="content has-text-justified" style="width: 1300px;">
-
+            <h3 class="title has-text-centered">BlueDepth</h3>
             <!-- # Center the image -->
             <img id="method_train" style="margin-left: auto; margin-right: auto; display: block;"
-              src="images\Method\Framework.jpg" alt="DepthFM training scheme" />
-
+              src="images\Dataset\Flowchart of URDB.png" alt="DepthFM training scheme" />
+            
             <p>
-              Overview of the proposed Tree-Mamba architecture. 
-              An underwater image first passes through a CNN-based encoder to produce multi-scale feature maps. 
-              These feature maps are then fed into 3&times;3 convolutional layers to reduce the feature channels. 
-              Next, Mamba fusion layers are used to refine the feature maps, 
-              where the proposed tree-aware scanning strategy 
-              adaptively constructs a minimum spanning tree with a spatial topological structure 
-              from the input feature maps and propagates multi-scale structural features via tree state propagation. 
+              The schematic diagram of constructing our BlueDepth dataset.
+              Dataset <span style="color: red;">A</span> contains all underwater images from the existing seven UMDE
+              datasets (Sea-Thru, NYU-U, SQUID, FLSea, Atlantis, SUIM-SDA, and USOD10K),
+              while Dataset <span style="color: red;">B</span>
+              stores all pseudo-labeled depth maps for each underwater
+              image from Dataset <span style="color: red;">A</span>.
+              Dataset <span style="color: red;">C</span> is a subset randomly selected
+              from Dataset <span style="color: red;">B</span>,
+              while Dataset <span style="color: red;">D</span> is its subjectively labeled counterpart.
+              The generation and selection of high-quality depth maps includes four main steps.
+              <em>Step 1</em> : Six state-of-the-art MDE methods
+              (AdaBins, DPT, Marigold, Depth Anything V1, Depth Anything V2, and Lotus Depth)
+              are used to generate pseudo-labeled depth maps from Dataset <span style="color: red;">A</span>.
+              <em>Step 2</em> : The depth maps are subjectively evaluated from Dataset <span style="color: red;">C</span>.
+              <em>Step 3</em> : The LAR-IQA model is fine-tuned with Dataset <span style="color: red;">D</span>.
+              <em>Step 4</em> : The fine-tuned LAR-IQA model is employed to automatically
+              select the best depth maps from Dataset <span style="color: red;">B</span>.
+            </p>
+          </div>
+
+          <div class="content has-text-justified" style="width: 1300px;">
+          <h3 class="title has-text-centered">Tree-Mamba</h3>
+          <!-- # Center the image -->
+            <img id="method_train" style="margin-left: auto; margin-right: auto; display: block;"
+              src="images\Method\Framework.png" />
+          
+            <p>
+              Overview of the proposed Tree-Mamba architecture.
+              An underwater image first passes through a CNN-based encoder to produce multi-scale feature maps.
+              These feature maps are then fed into 3&times;3 convolutional layers to reduce the feature channels.
+              Next, Mamba fusion layers are used to refine the feature maps,
+              where the proposed tree-aware scanning strategy
+              adaptively constructs a minimum spanning tree with a spatial topological structure
+              from the input feature maps and propagates multi-scale structural features via tree state propagation.
               Finally, the depth map is produced through the prediction head.
             </p>
-
-            <!-- <h3 class="title has-text-centered">
-            Quantitative Results
-          </h3>
-          <p>
-            Quantitative comparison of DepthFM with affine-invariant depth estimators on several zero-shot benchmarks.
-            Bold numbers are the best, underscored second best. Our method outperforms other methods on both indoor and
-            outdoor scenes in most cases with only little training on purely synthetic datasets.
-          </p> -->
-
-            <!-- <img id="comparison" width="100%" src="./images/sota-comparison.jpg" alt="Comparison with other methods" /> -->
-
-            <!-- <p class="mt-5">
-            Refer to the pdf paper linked above for more details on qualitative, quantitative, and ablation studies.
-          </p> -->
+          
+          
+          
           </div>
+          
         </div>
       </div>
       <!--/ Method. -->
