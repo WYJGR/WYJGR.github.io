@@ -249,34 +249,26 @@
           <div class="content has-text-justified">
 
             <p>
-              Underwater Monocular Depth Estimation (UMDE) is a critical task that aims to estimate high-precision depth
-              maps from underwater degraded images caused by light absorption and scattering effects in marine
-              environments.
-              Recently prevailing Mamba-based methods have achieved the promising performance across various vision
-              tasks,
-              however, these approaches
-              perform poorly in the UMDE task since their inflexible state scanning strategies fail in modeling
-              structural features of
-              underwater images. Meanwhile, existing UMDE datasets usually contain unreliable depth labels, leading to
-              incorrect
-              object-depth relationships between underwater images and corresponding depth maps. To overcome these
-              limitations, we
-              develop a novel tree-aware Mamba method, dubbed as Tree-Mamba, for estimating accurate monocular depth
-              maps from
-              underwater degraded images. Specifically, a tree-aware scanning strategy is proposed to adaptively
-              construct minimum
-              spanning tree based on feature similarity, and spatial topological features among tree nodes are flexibly
-              aggregated
-              through bottom-up and top-down traversals, enabling to achieve stronger capabilities of multi-scale
-              feature
-              representation. Moreover, we construct an underwater depth estimation benchmark (called BlueDepth),
-              including 38,162 underwater
-              image pairs with reliable depth labels, as a baseline for training existing deep learning-based UMDE
-              methods to learn
-              accurate object-depth relationships. Extensive experiments demonstrate the superiority of the proposed
-              Tree-Mamba over
-              several leading methods in both qualitative results and quantitative evaluations with competitive
-              computational efficiency.
+              Underwater Monocular Depth Estimation (UMDE) is a critical task that aims to estimate high-precision depth maps 
+              from underwater degraded images caused by light absorption and scattering effects in marine environments. 
+              Recently, Mamba-based methods have achieved promising performance across various vision tasks; 
+              however, they struggle with the UMDE task because their inflexible state scanning strategies 
+              fail to model the structural features of underwater images effectively. 
+              Meanwhile, existing UMDE datasets usually contain unreliable depth labels, 
+              leading to incorrect object-depth relationships between underwater images and their corresponding depth maps. 
+              To overcome these limitations, we develop a novel tree-aware Mamba method, dubbed Tree-Mamba, 
+              for estimating accurate monocular depth maps from underwater degraded images. 
+              Specifically, we propose a tree-aware scanning strategy that adaptively constructs a minimum spanning tree 
+              based on feature similarity. The spatial topological features among the tree nodes are 
+              then flexibly aggregated through bottom-up and top-down traversals, 
+              enabling stronger multi-scale feature representation capabilities.
+              Moreover, we construct an underwater depth estimation benchmark (called BlueDepth), 
+              which consists of 38,162 underwater image pairs with reliable depth labels. 
+              This benchmark serves as a foundational dataset for training existing deep learning-based UMDE methods 
+              to learn accurate object-depth relationships. 
+              Extensive experiments demonstrate the superiority of the proposed Tree-Mamba 
+              over several leading methods in both qualitative results and 
+              quantitative evaluations with competitive computational efficiency.
             </p>
 
           </div>
@@ -889,21 +881,21 @@
             <p>
               The schematic diagram of constructing our BlueDepth dataset.
               Dataset <span style="color: red;">A</span> contains all underwater images from the existing seven UMDE
-              datasets (Sea-Thru, NYU-U, SQUID,
-              FLSea, Atlantis, SUIM-SDA, and USOD10K),
-              while Dataset <span style="color: red;">B</span> stores all pseudo-labeled depth maps for each underwater
+              datasets (Sea-Thru, NYU-U, SQUID, FLSea, Atlantis, SUIM-SDA, and USOD10K),
+              while Dataset <span style="color: red;">B</span> 
+              stores all pseudo-labeled depth maps for each underwater
               image from Dataset <span style="color: red;">A</span>.
-              Dataset <span style="color: red;">C</span> is a subset randomly selected from Dataset <span
-                style="color: red;">B</span>,
+              Dataset <span style="color: red;">C</span> is a subset randomly selected 
+              from Dataset <span style="color: red;">B</span>,
               while Dataset <span style="color: red;">D</span> is its subjectively labeled counterpart.
-              The generation and selection of high-quality depth maps includes four main steps:
-              Step 1: six state-of-the-art MDE methods (AdaBins, DPT, Marigold, Depth Anything V1, Depth Anything V2,
-              and Lotus Depth)
+              The generation and selection of high-quality depth maps includes four main steps.
+              <em>Step 1</em> : Six state-of-the-art MDE methods 
+              (AdaBins, DPT, Marigold, Depth Anything V1, Depth Anything V2, and Lotus Depth)
               are used to generate pseudo-labeled depth maps from Dataset <span style="color: red;">A</span>.
-              Step 2: the depth maps are subjectively evaluated from Dataset <span style="color: red;">B</span>.
-              Step 3: the LAR-IQA model is fine-tuned with Dataset <span style="color: red;">D</span>.
-              Step 4: the fine-tuned LAR-IQA model is employed to automatically select the best depth maps from Dataset
-              <span style="color: red;">B</span>.
+              <em>Step 2</em> : The depth maps are subjectively evaluated from Dataset <span style="color: red;">C</span>.
+              <em>Step 3</em> : The LAR-IQA model is fine-tuned with Dataset <span style="color: red;">D</span>.
+              <em>Step 4</em> : The fine-tuned LAR-IQA model is employed to automatically 
+              select the best depth maps from Dataset <span style="color: red;">B</span>.
             </p>
 
 
@@ -946,14 +938,14 @@
               src="images\Method\Framework.jpg" alt="DepthFM training scheme" />
 
             <p>
-              The overview of our proposed Tree-Mamba architecture.
-              An underwater image first passes the CNN-based encoder to produce multi-scale feature maps.
-              Then, these feature maps are fed into Conv 3&times;3 layers for reducing feature channel.
-              Next, Mamba fusion layers are used to refine these feature maps,
-              where the proposed tree-aware scanning strategy
-              adaptively constructs minimum spanning tree with spatial topology structure
-              from input feature maps and propagates multi-scale structure features by tree state propagation.
-              The depth map is finally produced through the prediction head.
+              Overview of the proposed Tree-Mamba architecture. 
+              An underwater image first passes through a CNN-based encoder to produce multi-scale feature maps. 
+              These feature maps are then fed into 3&times;3 convolutional layers to reduce the feature channels. 
+              Next, Mamba fusion layers are used to refine the feature maps, 
+              where the proposed tree-aware scanning strategy 
+              adaptively constructs a minimum spanning tree with a spatial topological structure 
+              from the input feature maps and propagates multi-scale structural features via tree state propagation. 
+              Finally, the depth map is produced through the prediction head.
             </p>
 
             <!-- <h3 class="title has-text-centered">
